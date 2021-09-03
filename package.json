@@ -1,0 +1,31 @@
+{
+  "name": "pachong",
+  "version": "1.0.0",
+  "description": "1、初始化项目 npm init\r 2、初始化 ts  tsc --init",
+  "main": "index.js",
+  "scripts": {
+    "dev:build": "tsc -w",
+    "dev:start": "nodemon node ./build/crowller.js",
+    "dev": "concurrently npm:dev:*"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "data/*"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cheerio": "^0.22.30",
+    "concurrently": "^6.2.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/request": "^2.48.7",
+    "@types/superagent": "^4.1.12",
+    "cheerio": "^1.0.0-rc.10",
+    "request": "^2.88.2",
+    "superagent": "^6.1.0"
+  }
+}
